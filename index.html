@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dried Flowers Art</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+        }
+
+        body {
+            background: rgb(255, 222, 159);
+        }
+
+        .navbar {
+            backdrop-filter: blur(100px);
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 20px;
+            padding: 18px;
+        }
+
+        .logo a {
+            font-size: 25px;
+            font-weight: bolder;
+            text-decoration: none;
+            color: rgb(107, 73, 9);
+        }
+
+        ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 35px;
+        }
+
+        ul li a {
+            font-size: 17px;
+            font-weight: bold;
+            color: rgb(107, 73, 9);
+        }
+
+        ul button {
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            gap: 10px;
+            background-color: rgb(107, 73, 9);
+        }
+
+        ul button a {
+            color: #fff;
+        }
+
+        #home .banner {
+            position: relative;
+            width: 100%;
+            height: 83vh;
+            background-image: url('assets/banner.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+        }
+
+        #home .banner .content {
+            background-color: #ffffff8a;
+            border-radius: 20px;
+            position: absolute;
+            top: 25%;
+            left: 21%;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #home .banner .content h1 {
+            font-size: 45px;
+            color: rgb(107, 73, 9);
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        #home .banner .content p {
+            font-size: 22px;
+            color: rgb(170, 129, 55);
+            margin-bottom: 10px;
+        }
+
+        #home .banner .content button {
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            color: #fff;
+            background-color: rgb(107, 73, 9);
+        }
+
+        /* services */
+
+        #services {
+            padding: 80px 10px;
+            background-color: rgb(255, 222, 159);
+        }
+
+        #services .head {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        #services .head p {
+            font-size: 12px;
+            margin-top: -20px;
+        }
+
+        #services .head h1 {
+            font-size: 30px;
+            padding: 15px;
+
+        }
+
+        #services .service-card {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            gap: 80px;
+            padding-top: 20px;
+        }
+
+        #services .service-card .card-structure {
+            max-width: 300px;
+            height: 450px;
+            background: rgb(220, 179, 103);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-top-left-radius: 80px;
+            border-top-right-radius: 80px;
+        }
+
+        #services .service-card .card-structure .cardimg {
+            max-width: 300px;
+            height: calc(450px / 1.8);
+        }
+
+        #services .service-card .card-structure .cardimg img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #services .service-card .card-structure .card-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            padding: 25px;
+        }
+
+        #services .service-card .card-structure .card-content h1 {
+            font-size: 22px;
+            color: rgb(107, 73, 9);
+            margin-top: 10px;
+        }
+
+
+        #services .service-card .card-structure .card-content p {
+            color: rgb(92, 91, 91);
+            font-size: 14px;
+        }
+
+        #services .service-card .card-structure .card-content h5 {
+            margin-top: 8px;
+        }
+
+        /* gift */
+
+        #gift {
+            min-height: 55vh;
+            background-color: #fff;
+        }
+
+        #gift .giftcontainer {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #gift .giftcontainer .giftcontent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 130px;
+            width: 60%;
+        }
+
+        #gift .giftcontainer .giftcontent h5 {
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        #gift .giftcontainer .giftcontent h1 {
+            font-size: 30px;
+            padding: 15px;
+        }
+
+        #gift .giftcontainer .giftcontent p {
+            font-size: 16px;
+        }
+
+        #gift .giftcontainer .giftcontent button {
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: none;
+            font-size: 14px;
+            color: #fff;
+            background-color: rgb(107, 73, 9);
+            margin-top: 20px;
+        }
+
+        #gift .giftcontainer .giftimg {
+            width: 470px;
+            height: 200px;
+        }
+
+        #gift .giftcontainer .giftimg img {
+            width: 100%;
+            border-bottom-left-radius: 200px;
+            border-bottom-right-radius: 200px;
+        }
+
+        /* popular */
+
+        #popular {
+            min-height: 80vh;
+        }
+
+        #popular .popcontent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        #popular .popcontent p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        #popular .popcontent h1 {
+            font-size: 30px;
+        }
+
+
+        #popular .collections {
+            display: flex;
+            flex-direction: row;
+            padding: 50px 120px;
+            gap: 50px;
+        }
+
+        #popular .collections .popular-structure {
+            width: 300px;
+            height: 250px;
+            border: 1px solid;
+        }
+
+        #popular .collections .popular-structure img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #popular .collections .popular-structure .below {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 5px;
+        }
+
+        /* contact */
+
+        #contact {
+            max-height: 65vh;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+
+        }
+
+        #contact .contactbx {
+            position: relative;
+            background-color: rgb(250, 196, 130);
+            width: 550px;
+            height: 450px;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            margin-top: 50px;
+        }
+
+        #contact .contactbx .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            padding: 80px;
+        }
+
+        #contact .contactbx .content h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        #contact .contactbx .content p {
+            font-size: 17px;
+        }
+
+        #contact .contactbx .content button {
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: none;
+            font-size: 17px;
+            color: #fff;
+            background-color: rgb(107, 73, 9);
+            margin-top: 15px;
+        }
+
+        /* footer */
+
+        #footer {
+            min-height: 20vh;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        #footer .bxone {
+            padding: 10px;
+        }
+
+        #footer .inp {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        #footer .bxone input {
+            padding: 9px 7px;
+        }
+
+        #footer .bxone button {
+            padding: 8px 10px;
+            background: rgb(191, 132, 24);
+            color: #fff;
+
+        }
+
+        #footer .right {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            padding-top: 10px;
+        }
+
+        #footer .right .bxtwo p {
+            padding: 2px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="">BLOOMA</a></div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Collections</a></li>
+                <li><a href="">Contact</a></li>
+                <button><a href="">SHOP</a></button>
+            </ul>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="banner">
+            <div class="content">
+                <h1>Custom Dried Flower Bouteque</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam doloribus voluptate
+                </p>
+                <button>Explore</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="services">
+
+        <div class="head">
+            <p>THIS IS WHAT WE DO</p>
+            <h1>OUR SERVICES</h1>
+        </div>
+        <div class="service-card">
+            <div class="card-structure">
+                <div class="cardimg">
+                    <img src="https://i.pinimg.com/736x/80/18/2a/80182ab5b5dc846074ed6a36a3c50f80.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h1>CUSTOMS BOUQUETS</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste fugiat sit ab inventore
+                        accusamus
+                        debitis voluptatum ipsa aliquid tempore fugit.</p>
+                    <h5>Read more</h5>
+                </div>
+
+            </div>
+
+            <div class="card-structure">
+                <div class="cardimg">
+                    <img src="https://i.pinimg.com/564x/a3/97/97/a397973a2e5afb02b1a82e3454eaec73.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h1>CUSTOMS BOUQUETS</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste fugiat sit ab inventore
+                        accusamus
+                        debitis voluptatum ipsa aliquid tempore fugit.</p>
+                    <h5>Read more</h5>
+                </div>
+
+            </div>
+
+            <div class="card-structure">
+                <div class="cardimg">
+                    <img src="https://i.pinimg.com/564x/90/b6/c7/90b6c764c141a502931f717daa911c08.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h1>CUSTOMS BOUQUETS</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste fugiat sit ab inventore
+                        accusamus
+                        debitis voluptatum ipsa aliquid tempore fugit.</p>
+                    <h5>Read more</h5>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="gift">
+        <div class="giftcontainer">
+            <div class="giftcontent">
+                <h6>REMEMBER YOUR LOVED ONES</h6>
+                <h1>Gitf Ideas That Last Longer</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima laudantium rerum officiis?
+                    Consequuntur quos hic debitis voluptas tenetur qui? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Unde soluta, vero non odit laboriosam ad dignissimos expedita quod. Ad adipisci
+                    praesentium reiciendis saepe sapiente eaque unde necessitatibus rerum sit sequi. </p>
+                <button>LET'S GO</button>
+            </div>
+
+            <div class="giftimg">
+                <img src="https://i.pinimg.com/736x/fa/3c/b7/fa3cb7c8c67a40bb87e0ea36cd60f7d7.jpg" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="popular">
+        <div class="popcontent">
+            <p>DRIED FLOWERS COLLECTION</p>
+            <h1>See What's Poplular</h1>
+        </div>
+        <div class="collections">
+            <div class="popular-structure">
+                <img src="https://i.pinimg.com/564x/0c/92/c0/0c92c0dc12dc286ac0000f056b4377b2.jpg" alt="">
+                <div class="below">
+                    <p>🤎</p>
+                    <p>🗨 120</p>
+                    <p>share</p>
+                </div>
+
+            </div>
+
+            <div class="popular-structure">
+                <img src="https://i.pinimg.com/564x/5d/d6/50/5dd6504c2a530917af46e59f35c8769d.jpg" alt="">
+                <div class="below">
+                    <p>🤎</p>
+                    <p>🗨 190</p>
+                    <p>share</p>
+                </div>
+
+            </div>
+
+            <div class="popular-structure">
+                <img src="https://i.pinimg.com/564x/34/fe/19/34fe19686cc8c5384d056a9057cf767c.jpg" alt="">
+                <div class="below">
+                    <p>🤎</p>
+                    <p>🗨 280</p>
+                    <p>share</p>
+                </div>
+
+            </div>
+
+            <div class="popular-structure">
+                <img src="https://i.pinimg.com/564x/ff/97/95/ff9795d85e72f2be737b936ff3e279cc.jpg" alt="">
+                <div class="below">
+                    <p>🤎</p>
+                    <p>🗨 170</p>
+                    <p>share</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <div class="contactbx">
+            <div class="content">
+                <h1>Talk To Our Staff</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestias veniam ab aut aperiam, animi
+                    facilis unde non nisi magnam, qui quaerat alias labore expedita sint perferendis. Eaque, repellat
+                    eligendi!</p>
+                <button>LET'S TALK</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="bxone">
+            <h2>FLEUR</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="inp">
+                <input type="text" name="" id="" placeholder="email">
+                <button>SUBSCRIBE</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="bxtwo">
+                <p> +22 3333344444 </p>
+                <p> hello@Flur </p>
+                <p> Find a Store </p>
+            </div>
+
+            <div class="bxtwo">
+                <p>Contact us </p>
+                <p>Shipping </p>
+                <p>Ordering & payment </p>
+            </div>
+
+            <div class="bxtwo">
+                <p>Work with us </p>
+                <p>Privacy policy </p>
+                <p>Terms & Conditions </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
